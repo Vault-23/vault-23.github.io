@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImmoMatch.ai — KI-gestützte Immobilienvermittlung für die Schweiz</title>
-  <meta name="description" content="Verkaufen Sie Ihre Immobilie mit autonomen KI-Agenten. Nur 1% Provision statt 2–3%. Full-Service-Qualität zum Bruchteil der Kosten.">
+  <title>ImmoMatch.ai | KI-gestützte Immobilienvermittlung für die Schweiz</title>
+  <meta name="description" content="Verkaufen Sie Ihre Immobilie mit autonomen KI-Agenten. Nur 1% Provision statt 2 bis 3%. Full-Service-Qualität zum Bruchteil der Kosten.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
@@ -75,9 +75,24 @@
       letter-spacing: -0.03em;
       color: var(--ink);
       text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
     }
 
     .logo span { color: var(--accent); }
+
+    .logo .ai-part {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo .ai-part .swiss-dot {
+      position: absolute;
+      top: -0.15em;
+      right: -0.05em;
+      width: 0.45em;
+      height: 0.45em;
+    }
 
     nav ul {
       list-style: none;
@@ -1111,7 +1126,7 @@
   <!-- NAV -->
   <nav id="nav">
     <div class="inner">
-      <a href="#" class="logo">immo<span>Match</span>.ai</a>
+      <a href="#" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <ul>
         <li><a href="#agenten">KI-Agenten</a></li>
         <li><a href="#preise">Preise</a></li>
@@ -1131,7 +1146,7 @@
       <div class="hero-content">
         <div class="hero-badge">Jetzt in Zürich verfügbar</div>
         <h1>Ihre Immobilie verkaufen. <em>Intelligent.</em></h1>
-        <p class="hero-sub">Autonome KI-Agenten übernehmen Bewertung, Vermarktung, Lead-Qualifizierung und Vertragsvorbe­reitung — für nur 1&nbsp;% Provision statt 2–3&nbsp;%.</p>
+        <p class="hero-sub">Unsere KI-Agenten kümmern sich um Bewertung, Vermarktung, Interessenten-Prüfung und Vertragsvorbereitung. Sie zahlen nur 1&nbsp;% Provision statt die üblichen 2 bis 3&nbsp;%.</p>
         <div class="hero-actions">
           <a href="#bewertung" class="btn-primary">
             Kostenlose Bewertung starten
@@ -1192,28 +1207,28 @@
     <div class="inner">
       <div class="section-label reveal">Das Problem</div>
       <h2 class="section-title reveal" style="color: var(--paper)">Der Schweizer Immobilienverkauf ist überteuert und veraltet</h2>
-      <p class="section-sub reveal">Jährlich fliessen über CHF 1,2 Mrd. an Maklerprovisionen — für eine Dienstleistung, die zu 80–90 % automatisierbar ist.</p>
+      <p class="section-sub reveal">Jährlich fliessen über CHF 1,2 Mrd. an Maklerprovisionen. Dabei lassen sich 80 bis 90 % dieser Arbeit längst automatisieren.</p>
       <div class="problem-grid">
         <div class="problem-card reveal">
           <div class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3>CHF 30'000–45'000 Provision</h3>
-          <p>Bei durchschnittlichen Verkaufspreisen von CHF 1–1.5 Mio. im Kanton Zürich zahlen Sie 2–3 % für eine Leistung, die KI besser und günstiger erbringt.</p>
+          <h3>CHF 30'000 bis 45'000 Provision</h3>
+          <p>Im Kanton Zürich liegen die Verkaufspreise bei CHF 1 bis 1,5 Mio. Dafür zahlen Sie 2 bis 3 % Provision. Das geht heute deutlich günstiger.</p>
         </div>
         <div class="problem-card reveal">
           <div class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>15+ Dokumente, 5+ Quellen</h3>
-          <p>Das Zusammentragen der Verkaufsunterlagen dauert 2–3 Wochen. Nur 12 % aller Schweizer verkaufen ohne professionelle Hilfe.</p>
+          <p>Das Zusammentragen aller Unterlagen dauert locker 2 bis 3 Wochen. Kein Wunder, dass nur 12 % der Schweizer ihre Immobilie ohne Hilfe verkaufen.</p>
         </div>
         <div class="problem-card reveal">
           <div class="icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Immobilien­touristen</h3>
-          <p>Makler verbringen 15–30 Minuten pro Anfrage mit unqualifizierten Interessenten. Der Grossteil der Leads führt zu nichts.</p>
+          <p>Makler verbringen pro Anfrage 15 bis 30 Minuten mit Leuten, die gar nicht kaufen wollen. Der Grossteil der Anfragen führt zu nichts.</p>
         </div>
       </div>
     </div>
@@ -1225,13 +1240,13 @@
       <div class="agents-header">
         <div class="section-label reveal">Die Lösung</div>
         <h2 class="section-title reveal">Vier autonome KI-Agenten für Ihren Verkauf</h2>
-        <p class="section-sub reveal">Spezialisierte KI-Agenten übernehmen die gesamte Wertschöpfungskette — rund um die Uhr, präzise und datengetrieben.</p>
+        <p class="section-sub reveal">Unsere spezialisierten KI-Agenten decken den gesamten Verkaufsprozess ab. Rund um die Uhr, präzise und datengetrieben.</p>
       </div>
       <div class="agents-grid">
         <div class="agent-card reveal">
           <div class="agent-number">01</div>
           <h3>Bewertungs-Agent</h3>
-          <p>Nutzt hedonische Modelle von IAZI, PriceHubble und Wüest Partner. Berücksichtigt Lagefaktoren, Marktbedingungen und Zinsumfeld — Genauigkeit ±5–10 % bei urbanen Standardobjekten.</p>
+          <p>Nutzt hedonische Modelle von IAZI, PriceHubble und Wüest Partner. Berücksichtigt Lage, Markt und Zinsumfeld. Bei urbanen Standardobjekten liegt die Genauigkeit bei ±5 bis 10 %.</p>
           <span class="agent-tag">Bewertung in Sekunden</span>
         </div>
         <div class="agent-card reveal">
@@ -1243,7 +1258,7 @@
         <div class="agent-card reveal">
           <div class="agent-number">03</div>
           <h3>Qualifizierungs-Agent</h3>
-          <p>24/7-Ansprechpartner für Interessenten. Prüft finanzielle Tragbarkeit, plant Besichtigungen automatisch und filtert unqualifizierte Anfragen — Zeitaufwand pro Lead unter 2 Minuten.</p>
+          <p>Rund um die Uhr erreichbar für Interessenten. Prüft die finanzielle Tragbarkeit, plant Besichtigungen automatisch und filtert unqualifizierte Anfragen heraus. Zeitaufwand pro Anfrage: unter 2 Minuten.</p>
           <span class="agent-tag">24/7 erreichbar</span>
         </div>
         <div class="agent-card reveal">
@@ -1262,7 +1277,7 @@
       <div class="pricing-header">
         <div class="section-label reveal">Preise</div>
         <h2 class="section-title reveal">Transparent. Keine versteckten Kosten.</h2>
-        <p class="section-sub reveal">Wählen Sie zwischen Erfolgsprovision und SaaS-Abonnement — beides deutlich günstiger als ein traditioneller Makler.</p>
+        <p class="section-sub reveal">Wählen Sie zwischen Erfolgsprovision und SaaS-Abo. Beides ist deutlich günstiger als ein traditioneller Makler.</p>
       </div>
       <div class="pricing-grid">
         <div class="pricing-card reveal">
@@ -1294,7 +1309,7 @@
         </div>
         <div class="pricing-card reveal">
           <div class="plan-name">Traditionell</div>
-          <div class="price" style="text-decoration: line-through; color: var(--muted);">2–3 %</div>
+          <div class="price" style="text-decoration: line-through; color: var(--muted);">2 bis 3 %</div>
           <div class="price-note">typische Maklergebühr</div>
           <ul>
             <li>Persönliche Betreuung</li>
@@ -1307,7 +1322,7 @@
         </div>
       </div>
       <div class="pricing-example reveal">
-        <p><strong>Rechenbeispiel:</strong> Bei einer Wohnung für CHF 800'000 zahlen Sie bei uns CHF 8'000 statt CHF 16'000–24'000 beim herkömmlichen Makler. Das sind <strong>CHF 8'000–16'000 mehr in Ihrer Tasche</strong>.</p>
+        <p><strong>Rechenbeispiel:</strong> Bei einer Wohnung für CHF 800'000 zahlen Sie bei uns CHF 8'000 statt CHF 16'000 bis 24'000 beim herkömmlichen Makler. Das sind <strong>CHF 8'000 bis 16'000 mehr in Ihrer Tasche</strong>.</p>
       </div>
     </div>
   </section>
@@ -1318,13 +1333,13 @@
       <div style="text-align:center; max-width:640px; margin:0 auto 0;">
         <div class="section-label reveal">So funktioniert's</div>
         <h2 class="section-title reveal">In 4 Schritten zum Verkauf</h2>
-        <p class="section-sub reveal" style="margin: 0 auto;">Von der ersten Bewertung bis zum Notartermin — unsere KI begleitet Sie durch den gesamten Prozess.</p>
+        <p class="section-sub reveal" style="margin: 0 auto;">Von der ersten Bewertung bis zum Notartermin. Unsere KI begleitet Sie durch den gesamten Prozess.</p>
       </div>
       <div class="steps">
         <div class="step reveal">
           <div class="step-num">1</div>
           <h3>Bewertung</h3>
-          <p>Adresse eingeben — innerhalb von Sekunden erhalten Sie eine datenbasierte Preisschätzung mit Vergleichsobjekten.</p>
+          <p>Geben Sie Ihre Adresse ein. Innert Sekunden erhalten Sie eine fundierte Preisschätzung mit Vergleichsobjekten.</p>
         </div>
         <div class="step reveal">
           <div class="step-num">2</div>
@@ -1339,7 +1354,7 @@
         <div class="step reveal">
           <div class="step-num">4</div>
           <h3>Abschluss</h3>
-          <p>Alle Dokumente werden automatisch zusammengestellt. Sie gehen nur noch zum Notar — wir bereiten alles vor.</p>
+          <p>Alle Dokumente werden automatisch zusammengestellt. Sie müssen nur noch zum Notar. Den Rest erledigen wir.</p>
         </div>
       </div>
     </div>
@@ -1350,10 +1365,10 @@
     <div class="inner">
       <div class="stat-item reveal">
         <div class="number">&lt; 2 Min.</div>
-        <div class="desc">pro Lead statt 15–30 Min.</div>
+        <div class="desc">pro Anfrage statt 15 bis 30 Min.</div>
       </div>
       <div class="stat-item reveal">
-        <div class="number">80–90 %</div>
+        <div class="number">80 bis 90 %</div>
         <div class="desc">des Makler-Workflows automatisiert</div>
       </div>
       <div class="stat-item reveal">
@@ -1361,7 +1376,7 @@
         <div class="desc">DE · FR · IT · EN</div>
       </div>
       <div class="stat-item reveal">
-        <div class="number">±5–10 %</div>
+        <div class="number">±5 bis 10 %</div>
         <div class="desc">Bewertungsgenauigkeit urban</div>
       </div>
     </div>
@@ -1458,14 +1473,14 @@
   <!-- FOOTER -->
   <footer>
     <div class="inner">
-      <a href="#" class="logo">immo<span>Match</span>.ai</a>
+      <a href="#" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <div class="links">
         <a href="/ueber-uns.html">Über uns</a>
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="/agb.html">AGB</a>
         <a href="#kontakt">Kontakt</a>
       </div>
-      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+      <div class="copy">© 2026 ImmoMatch.ai, Zürich, Schweiz</div>
     </div>
   </footer>
 
@@ -1517,11 +1532,11 @@
             form.style.display = 'none';
             success.style.display = 'block';
           } else {
-            btn.textContent = 'Fehler — bitte erneut versuchen';
+            btn.textContent = 'Fehler, bitte nochmals versuchen';
             btn.disabled = false;
           }
         } catch {
-          btn.textContent = 'Fehler — bitte erneut versuchen';
+          btn.textContent = 'Fehler, bitte nochmals versuchen';
           btn.disabled = false;
         }
       });

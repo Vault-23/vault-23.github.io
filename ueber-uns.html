@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns — ImmoMatch.ai</title>
-  <meta name="description" content="Das Team hinter ImmoMatch.ai — KI-gestützte Immobilienvermittlung für die Schweiz.">
+  <title>Über uns | ImmoMatch.ai</title>
+  <meta name="description" content="Das Team hinter ImmoMatch.ai. KI-gestützte Immobilienvermittlung für die Schweiz.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
@@ -62,9 +62,24 @@
       letter-spacing: -0.03em;
       color: var(--ink);
       text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
     }
 
     .logo span { color: var(--accent); }
+
+    .logo .ai-part {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo .ai-part .swiss-dot {
+      position: absolute;
+      top: -0.15em;
+      right: -0.05em;
+      width: 0.45em;
+      height: 0.45em;
+    }
 
     nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
     nav ul li a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
@@ -303,7 +318,7 @@
 
   <nav>
     <div class="inner">
-      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <a href="/" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <ul>
         <li><a href="/#agenten">KI-Agenten</a></li>
         <li><a href="/#preise">Preise</a></li>
@@ -322,8 +337,8 @@
   <div class="content">
 
     <h2>Unsere Mission</h2>
-    <p>ImmoMatch.ai wurde gegründet, um den Schweizer Immobilienverkauf grundlegend zu verändern. Jährlich fliessen über <strong>CHF 1,2 Milliarden</strong> an Maklerprovisionen — für eine Dienstleistung, die zu 80–90 % automatisierbar ist. Wir schliessen die Lücke zwischen teuren Full-Service-Maklern und limitierten Selbstverkaufsportalen.</p>
-    <p>Durch den Einsatz spezialisierter KI-Agenten für Bewertung, Vermarktung, Lead-Qualifizierung und Vertragsvorbereitung bieten wir Full-Service-Qualität zu einem Bruchteil der Kosten: <strong>nur 1 % Erfolgsprovision</strong> statt 2–3 %.</p>
+    <p>ImmoMatch.ai will den Schweizer Immobilienverkauf grundlegend verändern. Jährlich fliessen über <strong>CHF 1,2 Milliarden</strong> an Maklerprovisionen in eine Dienstleistung, die sich zu 80 bis 90 % automatisieren lässt. Wir schliessen die Lücke zwischen teuren Full-Service-Maklern und den limitierten Selbstverkaufsportalen.</p>
+    <p>Mit spezialisierten KI-Agenten für Bewertung, Vermarktung, Interessenten-Prüfung und Vertragsvorbereitung bieten wir Full-Service-Qualität zu einem Bruchteil der Kosten. <strong>Nur 1 % Erfolgsprovision</strong> statt der üblichen 2 bis 3 %.</p>
 
     <h2>Unsere Werte</h2>
     <div class="values-grid">
@@ -339,51 +354,51 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
         <h3>Innovation</h3>
-        <p>Autonome KI-Agenten statt manueller Prozesse. Technologie, die für Sie arbeitet — rund um die Uhr.</p>
+        <p>KI-Agenten statt manueller Prozesse. Technologie, die für Sie arbeitet. Rund um die Uhr.</p>
       </div>
       <div class="value-card">
         <div class="icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
         <h3>Fairness</h3>
-        <p>1 % Provision bedeutet: Sie behalten mehr von Ihrem Geld. Faire Preise für faire Leistung.</p>
+        <p>1 % Provision heisst: Sie behalten mehr von Ihrem Geld. Faire Preise für faire Leistung.</p>
       </div>
     </div>
 
     <h2>Der Gründer</h2>
-    <p>ImmoMatch.ai wird von einem Technologie-Experten mit über einer Dekade Erfahrung im Enterprise-Umfeld gegründet. Die langjährige Arbeit mit Schweizer Unternehmen hat ein tiefes Verständnis für den lokalen Markt, regulatorische Anforderungen und die Bedürfnisse von Kunden geschaffen.</p>
-    <p>Die Kombination aus <strong>Technologie-Expertise</strong>, einem <strong>breiten Industrie-Netzwerk</strong> und der Fähigkeit, etablierte Geschäftsmodelle radikal zu hinterfragen, ist der strategische Vorteil von ImmoMatch.ai. Die grössten Disruptionen kommen nicht von Insidern — sie kommen von Technologen, die veraltete Modelle von aussen hinterfragen.</p>
+    <p>ImmoMatch.ai wird von einem Technologie-Experten mit über einer Dekade Erfahrung im Enterprise-Umfeld gegründet. Er war von der Gründung 2008 bis zum Verkauf als CTO von <strong>eventlokale.ch</strong> dabei, dem grössten Eventportal der Schweiz mit über 3'000 täglichen Nutzern. Diese Erfahrung im Aufbau einer Schweizer Plattform von Null auf Marktführerschaft prägt den Ansatz von ImmoMatch.ai.</p>
+    <p>Die Kombination aus <strong>Technologie-Expertise</strong>, einem <strong>breiten Industrie-Netzwerk</strong> und der Bereitschaft, etablierte Geschäftsmodelle in Frage zu stellen, ist der strategische Vorteil von ImmoMatch.ai. Die grössten Veränderungen kommen selten von Insidern. Sie kommen von Technologen, die veraltete Modelle von aussen hinterfragen.</p>
 
     <h2>Unsere Roadmap</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="date">Q1–Q2 2026</div>
+        <div class="date">Q1/Q2 2026</div>
         <h3>MVP & Validierung</h3>
         <p>Launch der KI-Bewertung und des Vermarktungs-Agenten. Erste Pilottransaktionen im Kanton Zürich.</p>
       </div>
       <div class="timeline-item">
-        <div class="date">Q3–Q4 2026</div>
+        <div class="date">Q3/Q4 2026</div>
         <h3>Agenten-Intelligenz</h3>
-        <p>Qualifizierungs-Agent mit 24/7-Interessentenbetreuung. Mehrsprachigkeit (DE/FR). Expansion auf Basel und Bern.</p>
+        <p>Qualifizierungs-Agent mit Interessentenbetreuung rund um die Uhr. Mehrsprachig (DE/FR). Expansion nach Basel und Bern.</p>
       </div>
       <div class="timeline-item">
         <div class="date">2027</div>
         <h3>Prozess-Integration</h3>
-        <p>Anbindung an Terravis/Grundbuch. Bankenpartnerschaften für integrierte Hypothekarprüfung. Expansion in die Romandie.</p>
+        <p>Anbindung an Terravis und Grundbuch. Bankenpartnerschaften für integrierte Hypothekarprüfung. Expansion in die Romandie.</p>
       </div>
       <div class="timeline-item">
         <div class="date">2028+</div>
         <h3>DACH-Expansion</h3>
-        <p>Expansion nach Österreich und Deutschland — der grösste Immobilienmarkt Europas mit einem Provisionspool von EUR 12–20 Mrd.</p>
+        <p>Expansion nach Österreich und Deutschland. Der grösste Immobilienmarkt Europas mit einem Provisionspool von EUR 12 bis 20 Mrd.</p>
       </div>
     </div>
 
     <h2>Technologie «Made in Switzerland»</h2>
-    <p>Unsere gesamte Infrastruktur läuft auf <strong>Microsoft Azure Switzerland North</strong> in Zürich. Alle personenbezogenen Daten bleiben in der Schweiz — vollständig konform mit dem neuen Datenschutzgesetz (nDSG). Wir setzen auf die neusten KI-Modelle für präzise Bewertungen, emotionale Verkaufstexte und intelligente Lead-Qualifizierung.</p>
+    <p>Unsere gesamte Infrastruktur läuft auf <strong>Microsoft Azure Switzerland North</strong> in Zürich. Alle personenbezogenen Daten bleiben in der Schweiz, vollständig konform mit dem nDSG. Wir setzen auf die neusten KI-Modelle für präzise Bewertungen, überzeugende Verkaufstexte und intelligente Interessenten-Qualifizierung.</p>
 
     <div class="cta-box">
       <h2>Bereit für den nächsten Schritt?</h2>
-      <p>Entdecken Sie, was Ihre Immobilie wert ist — kostenlos und unverbindlich.</p>
+      <p>Entdecken Sie, was Ihre Immobilie wert ist. Kostenlos und unverbindlich.</p>
       <a href="/#bewertung" class="btn-primary">
         Kostenlose Bewertung starten
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -394,14 +409,14 @@
 
   <footer>
     <div class="inner">
-      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <a href="/" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <div class="links">
         <a href="/ueber-uns.html">Über uns</a>
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="/agb.html">AGB</a>
         <a href="/#kontakt">Kontakt</a>
       </div>
-      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+      <div class="copy">© 2026 ImmoMatch.ai, Zürich, Schweiz</div>
     </div>
   </footer>
 
