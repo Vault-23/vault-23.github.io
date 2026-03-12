@@ -1840,7 +1840,7 @@
         <a href="#kontakt">Kontakt</a>
       </div>
       <div class="copy">© 2026 immoMatch.ai, Zürich, Schweiz</div>
-      <div style="font-size:0.65rem;opacity:0.35;margin-top:0.75rem;">Build 2026-03-12 21:30 UTC</div>
+      <div style="font-size:0.65rem;opacity:0.35;margin-top:0.75rem;">Build 2026-03-12 23:25 CET</div>
     </div>
   </footer><script>
     // Scroll-based nav
@@ -1897,6 +1897,39 @@
       });
     });
 
+
+
+    // Early Access form
+    const eaForm = document.getElementById('eaForm');
+    const eaSuccess = document.getElementById('eaSuccess');
+    const eaContainer = document.getElementById('eaFormContainer');
+    if (eaForm) {
+      eaForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = eaForm.querySelector('.btn-ea');
+        const origHTML = btn.innerHTML;
+        btn.textContent = 'Wird angemeldet...';
+        btn.disabled = true;
+        try {
+          const res = await fetch(eaForm.action, {
+            method: 'POST',
+            body: new FormData(eaForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            eaContainer.style.display = 'none';
+            eaSuccess.style.display = 'block';
+          } else {
+            btn.textContent = 'Fehler, bitte nochmal versuchen';
+            btn.disabled = false;
+          }
+        } catch (err) {
+          btn.textContent = 'Fehler, bitte nochmal versuchen';
+          btn.disabled = false;
+        }
+      });
+    }
+
     // Contact form submission
     const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
@@ -1910,23 +1943,7 @@
           const res = await fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            form.style.display = 'none';
-            success.style.display = 'block';
-          } else {
-            btn.textContent = 'Fehler, bitte nochmal versuchen';
-            btn.disabled = false;
-          }
-        } catch (err) {
-          btn.textContent = 'Fehler, bitte nochmal versuchen';
-          btn.disabled = false;
-        }
-      });
-    }
-
-    // Language switcher
+            headers: { 'Accept': 'application/json'
   </script>
 
 </body>

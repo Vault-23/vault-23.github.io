@@ -364,7 +364,7 @@
         <a href="/#kontakt">Kontakt</a>
       </div>
       <div class="copy">© 2026 immoMatch.ai, Zürich, Schweiz</div>
-      <div style="font-size:0.65rem;opacity:0.35;margin-top:0.75rem;">Build 2026-03-12 21:30 UTC</div>
+      <div style="font-size:0.65rem;opacity:0.35;margin-top:0.75rem;">Build 2026-03-12 23:25 CET</div>
     </div>
   </footer>
 
@@ -374,28 +374,6 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileOverlay = document.getElementById('mobileOverlay');
     const mobileClose = document.getElementById('mobileClose');
-
-    function openMenu() {
-      mobileMenu.classList.add('open');
-      mobileOverlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove('open');
-      mobileOverlay.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    if (menuToggle) menuToggle.addEventListener('click', openMenu);
-    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
-
-    document.querySelectorAll('.mobile-menu a').forEach(a => {
-      a.addEventListener('click', closeMenu);
-    });
-
-    // Language switcher
   </script>
 
 </body>
