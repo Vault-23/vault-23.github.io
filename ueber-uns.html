@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns — ImmoMatch.ai</title>
+  <meta name="description" content="Das Team hinter ImmoMatch.ai — KI-gestützte Immobilienvermittlung für die Schweiz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a0f1a;
+      --paper: #f8f6f1;
+      --cream: #f0ede5;
+      --accent: #1a6b4a;
+      --accent-light: #e8f5ee;
+      --accent-glow: #2dd882;
+      --slate: #4a5568;
+      --muted: #8a94a6;
+      --border: #e2ddd4;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      background: rgba(248, 246, 241, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+    nav ul li a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--ink); }
+
+    .nav-cta {
+      background: var(--ink) !important;
+      color: var(--paper) !important;
+      padding: 0.6rem 1.5rem !important;
+      border-radius: 100px !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+    }
+
+    /* HERO */
+    .page-hero {
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-hero .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--slate);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .content h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      margin: 3rem 0 1rem;
+      line-height: 1.2;
+    }
+
+    .content h2:first-child { margin-top: 0; }
+
+    .content p {
+      font-size: 1rem;
+      color: var(--slate);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .content strong { color: var(--ink); }
+
+    /* VALUES */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(10, 15, 26, 0.06);
+    }
+
+    .value-card .icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .value-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      font-size: 0.88rem;
+      color: var(--slate);
+      margin-bottom: 0;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      margin: 2rem 0 3rem;
+      padding-left: 2rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 2.5rem 1.5rem;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.4rem;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      border: 3px solid var(--paper);
+      margin-left: -5px;
+    }
+
+    .timeline-item .date {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: var(--radius);
+      padding: 3rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-box h2 {
+      font-family: 'Instrument Serif', serif;
+      color: var(--paper);
+      margin: 0 0 0.75rem;
+    }
+
+    .cta-box p {
+      color: rgba(248, 246, 241, 0.6);
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(26, 107, 74, 0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(248, 246, 241, 0.5);
+      padding: 3rem 2rem;
+    }
+
+    footer .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo { color: var(--paper); }
+    footer .logo span { color: var(--accent-glow); }
+    footer a { color: rgba(248, 246, 241, 0.5); text-decoration: none; transition: color 0.3s; }
+    footer a:hover { color: var(--paper); }
+    footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
+    footer .copy { font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .values-grid { grid-template-columns: 1fr; }
+      footer .inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+      footer .links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <ul>
+        <li><a href="/#agenten">KI-Agenten</a></li>
+        <li><a href="/#preise">Preise</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li><a href="/#bewertung" class="nav-cta">Kostenlose Bewertung</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="label">Über uns</div>
+    <h1>Die Zukunft des Immobilien­verkaufs</h1>
+    <p>Wir glauben, dass niemand CHF 30'000 Provision bezahlen sollte für eine Dienstleistung, die Technologie besser und günstiger erbringt.</p>
+  </div>
+
+  <div class="content">
+
+    <h2>Unsere Mission</h2>
+    <p>ImmoMatch.ai wurde gegründet, um den Schweizer Immobilienverkauf grundlegend zu verändern. Jährlich fliessen über <strong>CHF 1,2 Milliarden</strong> an Maklerprovisionen — für eine Dienstleistung, die zu 80–90 % automatisierbar ist. Wir schliessen die Lücke zwischen teuren Full-Service-Maklern und limitierten Selbstverkaufsportalen.</p>
+    <p>Durch den Einsatz spezialisierter KI-Agenten für Bewertung, Vermarktung, Lead-Qualifizierung und Vertragsvorbereitung bieten wir Full-Service-Qualität zu einem Bruchteil der Kosten: <strong>nur 1 % Erfolgsprovision</strong> statt 2–3 %.</p>
+
+    <h2>Unsere Werte</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Transparenz</h3>
+        <p>Keine versteckten Kosten, keine Überraschungen. Sie wissen von Anfang an, was Sie bezahlen.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Innovation</h3>
+        <p>Autonome KI-Agenten statt manueller Prozesse. Technologie, die für Sie arbeitet — rund um die Uhr.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Fairness</h3>
+        <p>1 % Provision bedeutet: Sie behalten mehr von Ihrem Geld. Faire Preise für faire Leistung.</p>
+      </div>
+    </div>
+
+    <h2>Der Gründer</h2>
+    <p>ImmoMatch.ai wird von einem Technologie-Experten mit über einer Dekade Erfahrung im Enterprise-Umfeld gegründet. Die langjährige Arbeit mit Schweizer Unternehmen hat ein tiefes Verständnis für den lokalen Markt, regulatorische Anforderungen und die Bedürfnisse von Kunden geschaffen.</p>
+    <p>Die Kombination aus <strong>Technologie-Expertise</strong>, einem <strong>breiten Industrie-Netzwerk</strong> und der Fähigkeit, etablierte Geschäftsmodelle radikal zu hinterfragen, ist der strategische Vorteil von ImmoMatch.ai. Die grössten Disruptionen kommen nicht von Insidern — sie kommen von Technologen, die veraltete Modelle von aussen hinterfragen.</p>
+
+    <h2>Unsere Roadmap</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="date">Q1–Q2 2026</div>
+        <h3>MVP & Validierung</h3>
+        <p>Launch der KI-Bewertung und des Vermarktungs-Agenten. Erste Pilottransaktionen im Kanton Zürich.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="date">Q3–Q4 2026</div>
+        <h3>Agenten-Intelligenz</h3>
+        <p>Qualifizierungs-Agent mit 24/7-Interessentenbetreuung. Mehrsprachigkeit (DE/FR). Expansion auf Basel und Bern.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2027</div>
+        <h3>Prozess-Integration</h3>
+        <p>Anbindung an Terravis/Grundbuch. Bankenpartnerschaften für integrierte Hypothekarprüfung. Expansion in die Romandie.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2028+</div>
+        <h3>DACH-Expansion</h3>
+        <p>Expansion nach Österreich und Deutschland — der grösste Immobilienmarkt Europas mit einem Provisionspool von EUR 12–20 Mrd.</p>
+      </div>
+    </div>
+
+    <h2>Technologie «Made in Switzerland»</h2>
+    <p>Unsere gesamte Infrastruktur läuft auf <strong>Microsoft Azure Switzerland North</strong> in Zürich. Alle personenbezogenen Daten bleiben in der Schweiz — vollständig konform mit dem neuen Datenschutzgesetz (nDSG). Wir setzen auf die neusten KI-Modelle für präzise Bewertungen, emotionale Verkaufstexte und intelligente Lead-Qualifizierung.</p>
+
+    <div class="cta-box">
+      <h2>Bereit für den nächsten Schritt?</h2>
+      <p>Entdecken Sie, was Ihre Immobilie wert ist — kostenlos und unverbindlich.</p>
+      <a href="/#bewertung" class="btn-primary">
+        Kostenlose Bewertung starten
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <div class="links">
+        <a href="/ueber-uns.html">Über uns</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/agb.html">AGB</a>
+        <a href="/#kontakt">Kontakt</a>
+      </div>
+      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung — ImmoMatch.ai</title>
+  <meta name="description" content="Datenschutzerklärung von ImmoMatch.ai — wie wir Ihre Daten schützen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a0f1a;
+      --paper: #f8f6f1;
+      --cream: #f0ede5;
+      --accent: #1a6b4a;
+      --accent-light: #e8f5ee;
+      --accent-glow: #2dd882;
+      --slate: #4a5568;
+      --muted: #8a94a6;
+      --border: #e2ddd4;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      background: rgba(248, 246, 241, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+    nav ul li a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--ink); }
+
+    .nav-cta {
+      background: var(--ink) !important;
+      color: var(--paper) !important;
+      padding: 0.6rem 1.5rem !important;
+      border-radius: 100px !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .page-hero {
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-hero .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .content h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 0.75rem;
+      line-height: 1.2;
+    }
+
+    .content h2:first-child { margin-top: 0; }
+
+    .content p, .content li {
+      font-size: 0.95rem;
+      color: var(--slate);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content strong { color: var(--ink); }
+
+    .draft-notice {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      color: #6d5c00;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .draft-notice svg { flex-shrink: 0; margin-top: 2px; }
+
+    footer {
+      background: var(--ink);
+      color: rgba(248, 246, 241, 0.5);
+      padding: 3rem 2rem;
+    }
+
+    footer .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo { color: var(--paper); }
+    footer .logo span { color: var(--accent-glow); }
+    footer a { color: rgba(248, 246, 241, 0.5); text-decoration: none; transition: color 0.3s; }
+    footer a:hover { color: var(--paper); }
+    footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
+    footer .copy { font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      footer .inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+      footer .links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <ul>
+        <li><a href="/#agenten">KI-Agenten</a></li>
+        <li><a href="/#preise">Preise</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li><a href="/#bewertung" class="nav-cta">Kostenlose Bewertung</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="label">Rechtliches</div>
+    <h1>Datenschutzerklärung</h1>
+    <p>Stand: März 2026</p>
+  </div>
+
+  <div class="content">
+
+    <div class="draft-notice">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div><strong>Entwurf:</strong> Diese Datenschutzerklärung ist ein Platzhalter und muss vor dem produktiven Einsatz von einer Rechtsberatung geprüft und an die tatsächlichen Datenverarbeitungen angepasst werden.</div>
+    </div>
+
+    <h2>1. Verantwortliche Stelle</h2>
+    <p>ImmoMatch.ai<br>[Vorname Nachname]<br>[Strasse und Hausnummer]<br>[PLZ Ort], Schweiz<br>E-Mail: info@immomatch.ai</p>
+
+    <h2>2. Grundsatz</h2>
+    <p>Der Schutz Ihrer Personendaten ist uns ein wichtiges Anliegen. Wir bearbeiten Ihre Personendaten im Einklang mit dem Schweizer Bundesgesetz über den Datenschutz (nDSG) und, soweit anwendbar, der EU-Datenschutz-Grundverordnung (DSGVO). In dieser Datenschutzerklärung informieren wir Sie darüber, welche Personendaten wir zu welchem Zweck bearbeiten.</p>
+
+    <h2>3. Erhobene Daten</h2>
+    <p>Wir erheben und bearbeiten folgende Kategorien von Personendaten:</p>
+    <ul>
+      <li><strong>Kontaktdaten:</strong> Name, E-Mail-Adresse, Telefonnummer, wenn Sie unser Kontaktformular nutzen oder sich registrieren.</li>
+      <li><strong>Immobiliendaten:</strong> Adresse, Objekttyp, Fläche, Baujahr und weitere Angaben zu Ihrer Immobilie, die Sie im Rahmen einer Bewertung oder eines Verkaufsauftrags angeben.</li>
+      <li><strong>Nutzungsdaten:</strong> IP-Adresse, Browsertyp, Betriebssystem, besuchte Seiten, Verweildauer und Referrer-URL beim Besuch unserer Website.</li>
+      <li><strong>Kommunikationsdaten:</strong> Inhalte von Nachrichten, die Sie uns über das Kontaktformular, E-Mail oder andere Kanäle senden.</li>
+    </ul>
+
+    <h2>4. Zweck der Datenbearbeitung</h2>
+    <p>Wir bearbeiten Ihre Personendaten zu folgenden Zwecken:</p>
+    <ul>
+      <li>Erbringung unserer Dienstleistungen (Immobilienbewertung, Vermarktung, Lead-Qualifizierung)</li>
+      <li>Beantwortung Ihrer Anfragen und Kommunikation mit Ihnen</li>
+      <li>Verbesserung und Weiterentwicklung unserer Website und Dienstleistungen</li>
+      <li>Einhaltung gesetzlicher Pflichten</li>
+    </ul>
+
+    <h2>5. KI-gestützte Datenbearbeitung</h2>
+    <p>ImmoMatch.ai setzt KI-Agenten ein, um Immobilienbewertungen zu erstellen, Inserate zu optimieren und Interessenten zu qualifizieren. Diese automatisierten Verarbeitungen basieren auf den von Ihnen bereitgestellten Daten sowie öffentlich zugänglichen Marktdaten. Gemäss Art. 21 nDSG haben Sie das Recht, über vollautomatisierte Einzelentscheidungen informiert zu werden und Ihren Standpunkt geltend zu machen.</p>
+
+    <h2>6. Datenhosting und Speicherort</h2>
+    <p>Unsere Infrastruktur wird auf <strong>Microsoft Azure Switzerland North (Zürich)</strong> betrieben. Alle personenbezogenen Daten werden in der Schweiz gespeichert und bearbeitet. Eine Übermittlung ins Ausland findet grundsätzlich nicht statt, es sei denn, es bestehen angemessene Garantien gemäss Art. 16 ff. nDSG.</p>
+
+    <h2>7. Weitergabe an Dritte</h2>
+    <p>Wir geben Ihre Personendaten nur in folgenden Fällen an Dritte weiter:</p>
+    <ul>
+      <li>An Bewertungsdienstleister (z. B. IAZI, PriceHubble, Wüest Partner) zur Erstellung von Immobilienbewertungen, in anonymisierter oder pseudonymisierter Form, soweit möglich</li>
+      <li>An Immobilienportale (z. B. Homegate, ImmoScout24) zur Veröffentlichung Ihrer Inserate, sofern Sie einen Verkaufsauftrag erteilt haben</li>
+      <li>An Behörden, wenn wir gesetzlich dazu verpflichtet sind</li>
+      <li>An Auftragsbearbeiter, die uns bei der Erbringung unserer Dienstleistungen unterstützen (z. B. Hosting-Provider), unter Abschluss entsprechender Verträge</li>
+    </ul>
+
+    <h2>8. Kontaktformular und Formspree</h2>
+    <p>Unser Kontaktformular nutzt den Dienst Formspree (Formspree Inc., USA) zur Verarbeitung Ihrer Nachrichten. Dabei werden Ihre eingegebenen Daten an die Server von Formspree übermittelt. Formspree verpflichtet sich zur Einhaltung angemessener Datenschutzstandards. Weitere Informationen finden Sie in der Datenschutzerklärung von Formspree.</p>
+
+    <h2>9. Cookies und Webanalyse</h2>
+    <p>[Platzhalter: Hier angeben, welche Cookies und Analyse-Tools eingesetzt werden, z. B. Google Analytics, Plausible, etc. Falls keine eingesetzt werden: «Unsere Website verwendet derzeit keine Tracking-Cookies oder Analyse-Tools.»]</p>
+
+    <h2>10. Ihre Rechte</h2>
+    <p>Sie haben gemäss nDSG folgende Rechte:</p>
+    <ul>
+      <li><strong>Auskunftsrecht:</strong> Sie können Auskunft darüber verlangen, ob und welche Personendaten wir von Ihnen bearbeiten.</li>
+      <li><strong>Berichtigungsrecht:</strong> Sie können die Berichtigung unrichtiger Personendaten verlangen.</li>
+      <li><strong>Löschungsrecht:</strong> Sie können die Löschung Ihrer Personendaten verlangen, sofern keine gesetzliche Aufbewahrungspflicht besteht.</li>
+      <li><strong>Datenherausgaberecht:</strong> Sie können die Herausgabe Ihrer Personendaten in einem gängigen elektronischen Format verlangen.</li>
+      <li><strong>Widerspruchsrecht:</strong> Sie können der Bearbeitung Ihrer Daten jederzeit widersprechen.</li>
+    </ul>
+    <p>Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <strong>info@immomatch.ai</strong></p>
+
+    <h2>11. Aufbewahrungsdauer</h2>
+    <p>Wir speichern Ihre Personendaten nur so lange, wie es für die Erfüllung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Kontaktanfragen werden in der Regel nach 12 Monaten gelöscht, sofern keine laufende Geschäftsbeziehung besteht.</p>
+
+    <h2>12. Datensicherheit</h2>
+    <p>Wir treffen angemessene technische und organisatorische Massnahmen, um Ihre Personendaten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen. Dazu gehören verschlüsselte Datenübertragung (TLS/SSL), Zugriffskontrollen und regelmässige Sicherheitsprüfungen.</p>
+
+    <h2>13. Änderungen</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung jederzeit anzupassen. Die aktuelle Version ist auf unserer Website veröffentlicht.</p>
+
+  </div>
+
+  <footer>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <div class="links">
+        <a href="/ueber-uns.html">Über uns</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/agb.html">AGB</a>
+        <a href="/#kontakt">Kontakt</a>
+      </div>
+      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGB — ImmoMatch.ai</title>
+  <meta name="description" content="Allgemeine Geschäftsbedingungen von ImmoMatch.ai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0a0f1a;
+      --paper: #f8f6f1;
+      --cream: #f0ede5;
+      --accent: #1a6b4a;
+      --accent-light: #e8f5ee;
+      --accent-glow: #2dd882;
+      --slate: #4a5568;
+      --muted: #8a94a6;
+      --border: #e2ddd4;
+      --white: #ffffff;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      background: rgba(248, 246, 241, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+    nav ul li a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+    nav ul li a:hover { color: var(--ink); }
+
+    .nav-cta {
+      background: var(--ink) !important;
+      color: var(--paper) !important;
+      padding: 0.6rem 1.5rem !important;
+      border-radius: 100px !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+    }
+
+    .page-hero {
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-hero .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero p {
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .content h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.6rem;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 0.75rem;
+      line-height: 1.2;
+    }
+
+    .content h2:first-child { margin-top: 0; }
+
+    .content p, .content li {
+      font-size: 0.95rem;
+      color: var(--slate);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .content ul, .content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content strong { color: var(--ink); }
+
+    .draft-notice {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      color: #6d5c00;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .draft-notice svg { flex-shrink: 0; margin-top: 2px; }
+
+    footer {
+      background: var(--ink);
+      color: rgba(248, 246, 241, 0.5);
+      padding: 3rem 2rem;
+    }
+
+    footer .inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .logo { color: var(--paper); }
+    footer .logo span { color: var(--accent-glow); }
+    footer a { color: rgba(248, 246, 241, 0.5); text-decoration: none; transition: color 0.3s; }
+    footer a:hover { color: var(--paper); }
+    footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
+    footer .copy { font-size: 0.8rem; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      footer .inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+      footer .links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <ul>
+        <li><a href="/#agenten">KI-Agenten</a></li>
+        <li><a href="/#preise">Preise</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li><a href="/#bewertung" class="nav-cta">Kostenlose Bewertung</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="label">Rechtliches</div>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p>Stand: März 2026</p>
+  </div>
+
+  <div class="content">
+
+    <div class="draft-notice">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div><strong>Entwurf:</strong> Diese AGB sind ein Platzhalter und müssen vor dem produktiven Einsatz von einer Rechtsberatung geprüft und an die tatsächlichen Geschäftsabläufe angepasst werden.</div>
+    </div>
+
+    <h2>1. Geltungsbereich</h2>
+    <p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Website und der Dienstleistungen von ImmoMatch.ai. Mit der Nutzung unserer Website und/oder der Beauftragung unserer Dienstleistungen akzeptieren Sie diese AGB.</p>
+    <p>ImmoMatch.ai ist ein Projekt von [Vorname Nachname], [Adresse], [PLZ Ort], Schweiz.</p>
+
+    <h2>2. Dienstleistungen</h2>
+    <p>ImmoMatch.ai bietet folgende Dienstleistungen an:</p>
+    <ul>
+      <li><strong>KI-Immobilienbewertung:</strong> Automatisierte Schätzung des Marktwerts einer Immobilie basierend auf Vergleichsdaten und Marktanalysen. Diese Bewertung stellt keine verbindliche Schätzung dar und ersetzt keine professionelle Expertise-Bewertung.</li>
+      <li><strong>Vermarktungsunterstützung:</strong> Erstellung und Optimierung von Inseraten, virtuelles Staging und Veröffentlichung auf Immobilienportalen.</li>
+      <li><strong>Lead-Qualifizierung:</strong> Automatische Vorqualifizierung und Betreuung von Kaufinteressenten.</li>
+      <li><strong>Dokumentenvorbereitung:</strong> Unterstützung bei der Zusammenstellung von Verkaufsunterlagen und Vorbereitung der Notariatsdokumente.</li>
+    </ul>
+
+    <h2>3. Preise und Zahlungsbedingungen</h2>
+    <p><strong>Modell A — Erfolgsprovision (1 %):</strong> Die Provision von 1 % des Verkaufspreises wird erst bei erfolgreichem Verkaufsabschluss (Beurkundung durch den Notar) fällig. Die Rechnung ist innert 30 Tagen nach Beurkundung zahlbar.</p>
+    <p><strong>Modell B — SaaS-Abonnement:</strong> Das monatliche Abonnement ab CHF 149 ist jeweils im Voraus zahlbar. Das Abonnement kann monatlich gekündigt werden. Bei Kündigung bleibt der Zugang bis zum Ende der bezahlten Periode bestehen.</p>
+    <p>Alle Preise verstehen sich in Schweizer Franken (CHF) und sind, sofern nicht anders angegeben, inklusive Mehrwertsteuer (soweit anwendbar).</p>
+
+    <h2>4. KI-gestützte Dienstleistungen</h2>
+    <p>Unsere Dienstleistungen werden massgeblich durch KI-Technologie unterstützt. Dabei gilt:</p>
+    <ul>
+      <li>KI-generierte Immobilienbewertungen sind Schätzungen und keine rechtsverbindlichen Gutachten.</li>
+      <li>KI-generierte Inserate und Texte werden nach bestem Wissen erstellt, unterliegen aber der Verantwortung des Auftraggebers bezüglich Richtigkeit der Angaben.</li>
+      <li>Bei kritischen Entscheidungen (Preisfestlegung, Vertragsunterzeichnung) empfehlen wir die Konsultation eines Fachspezialisten.</li>
+    </ul>
+
+    <h2>5. Pflichten des Kunden</h2>
+    <p>Der Kunde verpflichtet sich:</p>
+    <ul>
+      <li>Wahrheitsgemässe und vollständige Angaben zu seiner Immobilie zu machen.</li>
+      <li>Relevante Mängel und Belastungen der Immobilie offenzulegen.</li>
+      <li>Die erforderlichen Unterlagen (Grundbuchauszug, Gebäudeversicherungspolice etc.) zeitnah bereitzustellen.</li>
+      <li>Unsere Dienstleistungen nicht für rechtswidrige Zwecke zu nutzen.</li>
+    </ul>
+
+    <h2>6. Haftung</h2>
+    <p>ImmoMatch.ai haftet nicht für:</p>
+    <ul>
+      <li>Die Richtigkeit von KI-generierten Bewertungen oder Prognosen. Diese dienen ausschliesslich als Orientierungshilfe.</li>
+      <li>Schäden, die aus der Verwendung unserer Bewertungen als alleinige Entscheidungsgrundlage entstehen.</li>
+      <li>Entgangenen Gewinn oder indirekte Schäden.</li>
+      <li>Handlungen oder Unterlassungen Dritter (z. B. Immobilienportale, Notariate, Käufer).</li>
+    </ul>
+    <p>Die Haftung von ImmoMatch.ai ist in jedem Fall auf die Höhe der vom Kunden bezahlten Vergütung beschränkt. Vorbehalten bleiben Schäden aus grober Fahrlässigkeit oder Vorsatz.</p>
+
+    <h2>7. Vertragslaufzeit und Kündigung</h2>
+    <p><strong>Erfolgsprovision:</strong> Der Vermittlungsauftrag gilt bis zum Verkaufsabschluss oder bis zur schriftlichen Kündigung durch eine der Parteien. Eine Kündigung ist jederzeit mit einer Frist von 14 Tagen möglich. Bei erfolgreicher Vermittlung vor Ablauf der Kündigungsfrist bleibt die Provisionspflicht bestehen.</p>
+    <p><strong>SaaS-Abonnement:</strong> Monatlich kündbar zum Ende der laufenden Abrechnungsperiode.</p>
+
+    <h2>8. Datenschutz</h2>
+    <p>Die Bearbeitung von Personendaten richtet sich nach unserer <a href="/datenschutz.html" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>.</p>
+
+    <h2>9. Geistiges Eigentum</h2>
+    <p>Alle Rechte an der Website, der Software, den KI-Agenten und den zugehörigen Inhalten liegen bei ImmoMatch.ai. KI-generierte Inserate und Texte, die im Rahmen eines Verkaufsauftrags erstellt werden, dürfen vom Kunden für den vereinbarten Zweck verwendet werden.</p>
+
+    <h2>10. Höhere Gewalt</h2>
+    <p>Keine Partei haftet für die Nichterfüllung ihrer Pflichten, soweit diese auf Umstände zurückzuführen ist, die ausserhalb ihrer Kontrolle liegen (höhere Gewalt), einschliesslich Naturereignisse, behördliche Massnahmen, Systemausfälle oder Störungen bei Drittanbietern.</p>
+
+    <h2>11. Salvatorische Klausel</h2>
+    <p>Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt. Die unwirksame Bestimmung wird durch eine wirksame Regelung ersetzt, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</p>
+
+    <h2>12. Anwendbares Recht und Gerichtsstand</h2>
+    <p>Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Zürich, Schweiz. Vorbehalten bleiben zwingende gesetzliche Gerichtsstände.</p>
+
+    <h2>13. Änderungen</h2>
+    <p>ImmoMatch.ai behält sich vor, diese AGB jederzeit zu ändern. Änderungen werden auf der Website veröffentlicht und treten mit der Veröffentlichung in Kraft. Bei wesentlichen Änderungen werden bestehende Kunden vorgängig informiert.</p>
+
+  </div>
+
+  <footer>
+    <div class="inner">
+      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <div class="links">
+        <a href="/ueber-uns.html">Über uns</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+        <a href="/agb.html">AGB</a>
+        <a href="/#kontakt">Kontakt</a>
+      </div>
+      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+    </div>
+  </footer>
+
+</body>
+</html>
