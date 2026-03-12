@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImmoMatch.ai | KI-gestützte Immobilienvermittlung für die Schweiz</title>
-  <meta name="description" content="Verkaufen Sie Ihre Immobilie mit autonomen KI-Agenten. Nur 1% Provision statt 2 bis 3%. Full-Service-Qualität zum Bruchteil der Kosten.">
+  <title>immoMatch.ai — Immobilie verkaufen mit KI | Nur 1% Provision | Zürich, Schweiz</title>
+  <meta name="description" content="immoMatch.ai: Verkaufen Sie Ihre Immobilie mit 4 autonomen KI-Agenten. Nur 1% Provision statt 2–3%. KI-Bewertung, Vermarktung, Lead-Qualifizierung und Dokumentenvorbereitung. Kostenlose Bewertung in 60 Sekunden.">
+
+  <meta name="keywords" content="Immobilie verkaufen Schweiz, KI Immobilienmakler, Immobilienbewertung Zürich, 1 Prozent Provision, Haus verkaufen ohne Makler, Wohnung verkaufen Zürich, PropTech Schweiz, KI-Bewertung Immobilien, günstiger Makler Schweiz, Immobilienverkauf online">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.immomatch.ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.immomatch.ai/">
+  <meta property="og:title" content="immoMatch.ai — Immobilie verkaufen mit KI | Nur 1% Provision">
+  <meta property="og:description" content="4 autonome KI-Agenten für Ihren Immobilienverkauf. Bewertung, Vermarktung, Lead-Qualifizierung und Dokumentenvorbereitung. Nur 1% Provision statt 2–3%.">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="immoMatch.ai">
+  <meta property="og:image" content="https://www.immomatch.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="immoMatch.ai — Immobilie verkaufen mit KI | Nur 1% Provision">
+  <meta name="twitter:image" content="https://www.immomatch.ai/og-image.png">
+  <meta name="twitter:description" content="4 autonome KI-Agenten für Ihren Immobilienverkauf. Nur 1% Provision statt 2–3%. Kostenlose Bewertung in 60 Sekunden.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0f1a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
@@ -1062,6 +1084,83 @@
       font-size: 0.8rem;
     }
 
+
+    /* MOBILE MENU */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 15, 26, 0.5);
+      z-index: 99;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100%;
+      background: var(--paper);
+      z-index: 101;
+      padding: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 30px rgba(10, 15, 26, 0.1);
+    }
+
+    .mobile-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .mobile-menu .close-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ink);
+      margin-bottom: 2rem;
+      margin-left: auto;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.85rem 0;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-menu .mobile-cta {
+      display: block;
+      margin-top: 1.5rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.85rem;
+      border-radius: 100px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-bottom: none;
+    }
+
+    .mobile-menu .mobile-cta:hover { color: var(--paper); }
+
     /* ─── ANIMATIONS ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -1120,6 +1219,72 @@
       footer .links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "immoMatch.ai",
+    "url": "https://www.immomatch.ai",
+    "description": "KI-gestützte Immobilienvermittlung für die Schweiz. 4 autonome KI-Agenten, nur 1% Erfolgsprovision.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oberwil b. Zug",
+      "postalCode": "6317",
+      "streetAddress": "Tellenmattstrasse 55",
+      "addressCountry": "CH"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Switzerland"
+    },
+    "priceRange": "1% Erfolgsprovision oder ab CHF 149/Monat",
+    "knowsLanguage": ["de", "fr", "it", "en"],
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "immoMatch.ai",
+    "url": "https://www.immomatch.ai",
+    "description": "KI-gestützte Immobilienvermittlung für die Schweiz",
+    "inLanguage": "de-CH"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet immoMatch.ai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "immoMatch.ai bietet zwei Modelle: 1% Erfolgsprovision (nur bei erfolgreichem Verkauf) oder ein SaaS-Abonnement ab CHF 149 pro Monat. Zum Vergleich: Traditionelle Makler verlangen 2–3% Provision."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie funktioniert die KI-Immobilienbewertung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere KI nutzt hedonische Modelle von IAZI, PriceHubble und Wüest Partner. Auf Basis von Vergleichstransaktionen, Lagefaktoren und dem aktuellen Marktumfeld erhalten Sie in Sekunden eine fundierte Preisschätzung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wo werden meine Daten gespeichert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alle Daten werden auf Microsoft Azure Switzerland North in Zürich gespeichert, vollständig konform mit dem Schweizer Datenschutzgesetz (nDSG)."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1168,7 +1333,7 @@
             <span class="price old">CHF 24'000</span>
           </div>
           <div class="savings-row">
-            <span class="name">ImmoMatch.ai (1 %)</span>
+            <span class="name">immoMatch.ai (1 %)</span>
             <span class="price new">CHF 12'000</span>
           </div>
           <div class="savings-highlight">
@@ -1401,13 +1566,13 @@
       <div class="contact-left">
         <div class="section-label reveal">Kontakt</div>
         <h2 class="section-title reveal" style="color: var(--paper)">Lassen Sie uns sprechen</h2>
-        <p class="section-sub reveal">Haben Sie Fragen zu ImmoMatch.ai oder möchten Sie Ihre Immobilie bewerten lassen? Wir melden uns innert 24 Stunden.</p>
+        <p class="section-sub reveal">Haben Sie Fragen zu immoMatch.ai oder möchten Sie Ihre Immobilie bewerten lassen? Wir melden uns innert 24 Stunden.</p>
         <div class="contact-info">
           <div class="contact-info-item reveal">
             <div class="icon-circle">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            info@immomatch.ai
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167f787079567f7b7b797b7762757e38777f">[email&#160;protected]</a>
           </div>
           <div class="contact-info-item reveal">
             <div class="icon-circle">
@@ -1470,6 +1635,19 @@
     </div>
   </section>
 
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="mobileClose" aria-label="Menü schliessen">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#agenten">KI-Agenten</a>
+    <a href="#preise">Preise</a>
+    <a href="#ablauf">So funktioniert's</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="#bewertung" class="mobile-cta">Kostenlose Bewertung</a>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="inner">
@@ -1480,11 +1658,11 @@
         <a href="/agb.html">AGB</a>
         <a href="#kontakt">Kontakt</a>
       </div>
-      <div class="copy">© 2026 ImmoMatch.ai, Zürich, Schweiz</div>
+      <div class="copy">© 2026 immoMatch.ai, Zürich, Schweiz</div>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Scroll-based nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -1503,6 +1681,32 @@
     }, { threshold: 0.15 });
 
     reveals.forEach(el => observer.observe(el));
+
+    // Mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileClose = document.getElementById('mobileClose');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mobileOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.mobile-menu a').forEach(a => {
+      a.addEventListener('click', closeMenu);
+    });
 
     // Smooth scroll for anchors
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1532,15 +1736,16 @@
             form.style.display = 'none';
             success.style.display = 'block';
           } else {
-            btn.textContent = 'Fehler, bitte nochmals versuchen';
+            btn.textContent = 'Fehler, bitte nochmal versuchen';
             btn.disabled = false;
           }
-        } catch {
-          btn.textContent = 'Fehler, bitte nochmals versuchen';
+        } catch (err) {
+          btn.textContent = 'Fehler, bitte nochmal versuchen';
           btn.disabled = false;
         }
       });
     }
   </script>
+
 </body>
 </html>

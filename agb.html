@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGB — ImmoMatch.ai</title>
-  <meta name="description" content="Allgemeine Geschäftsbedingungen von ImmoMatch.ai.">
+  <title>AGB — immoMatch.ai | Allgemeine Geschäftsbedingungen</title>
+  <meta name="description" content="Allgemeine Geschäftsbedingungen von immoMatch.ai. Informationen zu Dienstleistungen, Preisen, Haftung und Kündigungsbedingungen.">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.immomatch.ai/agb.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.immomatch.ai/agb.html">
+  <meta property="og:title" content="AGB — immoMatch.ai">
+  <meta property="og:description" content="Allgemeine Geschäftsbedingungen von immoMatch.ai. KI-gestützte Immobilienvermittlung für die Schweiz.">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="immoMatch.ai">
+  <meta property="og:image" content="https://www.immomatch.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0f1a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
@@ -64,6 +81,19 @@
     }
 
     .logo span { color: var(--accent); }
+
+    .logo .ai-part {
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo .ai-part .swiss-dot {
+      position: absolute;
+      top: -0.15em;
+      right: -0.05em;
+      width: 0.45em;
+      height: 0.45em;
+    }
 
     nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
     nav ul li a { text-decoration: none; color: var(--slate); font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
@@ -138,21 +168,6 @@
 
     .content strong { color: var(--ink); }
 
-    .draft-notice {
-      background: #fff8e1;
-      border: 1px solid #ffe082;
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2.5rem;
-      font-size: 0.9rem;
-      color: #6d5c00;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .draft-notice svg { flex-shrink: 0; margin-top: 2px; }
-
     footer {
       background: var(--ink);
       color: rgba(248, 246, 241, 0.5);
@@ -174,6 +189,100 @@
     footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
     footer .copy { font-size: 0.8rem; }
 
+    
+    /* MOBILE MENU */
+    .menu-toggle { display: none; }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 15, 26, 0.5);
+      z-index: 99;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100%;
+      background: var(--paper);
+      z-index: 101;
+      padding: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 30px rgba(10, 15, 26, 0.1);
+    }
+
+    .mobile-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .mobile-menu .close-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ink);
+      margin-bottom: 2rem;
+      margin-left: auto;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.85rem 0;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-menu .mobile-cta {
+      display: block;
+      margin-top: 1.5rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.85rem;
+      border-radius: 100px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-bottom: none;
+    }
+
+    .mobile-menu .mobile-cta:hover { color: var(--paper); }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        color: var(--ink);
+      }
+    }
+
     @media (max-width: 768px) {
       nav ul { display: none; }
       footer .inner { flex-direction: column; gap: 1.5rem; text-align: center; }
@@ -185,13 +294,16 @@
 
   <nav>
     <div class="inner">
-      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <a href="/" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <ul>
         <li><a href="/#agenten">KI-Agenten</a></li>
         <li><a href="/#preise">Preise</a></li>
         <li><a href="/#kontakt">Kontakt</a></li>
         <li><a href="/#bewertung" class="nav-cta">Kostenlose Bewertung</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Menü öffnen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
@@ -203,17 +315,12 @@
 
   <div class="content">
 
-    <div class="draft-notice">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <div><strong>Entwurf:</strong> Diese AGB sind ein Platzhalter und müssen vor dem produktiven Einsatz von einer Rechtsberatung geprüft und an die tatsächlichen Geschäftsabläufe angepasst werden.</div>
-    </div>
-
     <h2>1. Geltungsbereich</h2>
-    <p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Website und der Dienstleistungen von ImmoMatch.ai. Mit der Nutzung unserer Website und/oder der Beauftragung unserer Dienstleistungen akzeptieren Sie diese AGB.</p>
-    <p>ImmoMatch.ai ist ein Projekt von [Vorname Nachname], [Adresse], [PLZ Ort], Schweiz.</p>
+    <p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung der Website und der Dienstleistungen von immoMatch.ai. Mit der Nutzung unserer Website und/oder der Beauftragung unserer Dienstleistungen akzeptieren Sie diese AGB.</p>
+    <p>immoMatch.ai<br>c/o HairVibes GmbH<br>Tellenmattstrasse 55<br>6317 Oberwil b. Zug, Schweiz<br>E-Mail: info@immomatch.ai</p>
 
     <h2>2. Dienstleistungen</h2>
-    <p>ImmoMatch.ai bietet folgende Dienstleistungen an:</p>
+    <p>immoMatch.ai bietet folgende Dienstleistungen an:</p>
     <ul>
       <li><strong>KI-Immobilienbewertung:</strong> Automatisierte Schätzung des Marktwerts einer Immobilie basierend auf Vergleichsdaten und Marktanalysen. Diese Bewertung stellt keine verbindliche Schätzung dar und ersetzt keine professionelle Expertise-Bewertung.</li>
       <li><strong>Vermarktungsunterstützung:</strong> Erstellung und Optimierung von Inseraten, virtuelles Staging und Veröffentlichung auf Immobilienportalen.</li>
@@ -244,14 +351,14 @@
     </ul>
 
     <h2>6. Haftung</h2>
-    <p>ImmoMatch.ai haftet nicht für:</p>
+    <p>immoMatch.ai haftet nicht für:</p>
     <ul>
       <li>Die Richtigkeit von KI-generierten Bewertungen oder Prognosen. Diese dienen ausschliesslich als Orientierungshilfe.</li>
       <li>Schäden, die aus der Verwendung unserer Bewertungen als alleinige Entscheidungsgrundlage entstehen.</li>
       <li>Entgangenen Gewinn oder indirekte Schäden.</li>
       <li>Handlungen oder Unterlassungen Dritter (z. B. Immobilienportale, Notariate, Käufer).</li>
     </ul>
-    <p>Die Haftung von ImmoMatch.ai ist in jedem Fall auf die Höhe der vom Kunden bezahlten Vergütung beschränkt. Vorbehalten bleiben Schäden aus grober Fahrlässigkeit oder Vorsatz.</p>
+    <p>Die Haftung von immoMatch.ai ist in jedem Fall auf die Höhe der vom Kunden bezahlten Vergütung beschränkt. Vorbehalten bleiben Schäden aus grober Fahrlässigkeit oder Vorsatz.</p>
 
     <h2>7. Vertragslaufzeit und Kündigung</h2>
     <p><strong>Erfolgsprovision:</strong> Der Vermittlungsauftrag gilt bis zum Verkaufsabschluss oder bis zur schriftlichen Kündigung durch eine der Parteien. Eine Kündigung ist jederzeit mit einer Frist von 14 Tagen möglich. Bei erfolgreicher Vermittlung vor Ablauf der Kündigungsfrist bleibt die Provisionspflicht bestehen.</p>
@@ -261,7 +368,7 @@
     <p>Die Bearbeitung von Personendaten richtet sich nach unserer <a href="/datenschutz.html" style="color: var(--accent); text-decoration: underline;">Datenschutzerklärung</a>.</p>
 
     <h2>9. Geistiges Eigentum</h2>
-    <p>Alle Rechte an der Website, der Software, den KI-Agenten und den zugehörigen Inhalten liegen bei ImmoMatch.ai. KI-generierte Inserate und Texte, die im Rahmen eines Verkaufsauftrags erstellt werden, dürfen vom Kunden für den vereinbarten Zweck verwendet werden.</p>
+    <p>Alle Rechte an der Website, der Software, den KI-Agenten und den zugehörigen Inhalten liegen bei immoMatch.ai. KI-generierte Inserate und Texte, die im Rahmen eines Verkaufsauftrags erstellt werden, dürfen vom Kunden für den vereinbarten Zweck verwendet werden.</p>
 
     <h2>10. Höhere Gewalt</h2>
     <p>Keine Partei haftet für die Nichterfüllung ihrer Pflichten, soweit diese auf Umstände zurückzuführen ist, die ausserhalb ihrer Kontrolle liegen (höhere Gewalt), einschliesslich Naturereignisse, behördliche Massnahmen, Systemausfälle oder Störungen bei Drittanbietern.</p>
@@ -273,22 +380,62 @@
     <p>Es gilt ausschliesslich Schweizer Recht. Gerichtsstand ist Zürich, Schweiz. Vorbehalten bleiben zwingende gesetzliche Gerichtsstände.</p>
 
     <h2>13. Änderungen</h2>
-    <p>ImmoMatch.ai behält sich vor, diese AGB jederzeit zu ändern. Änderungen werden auf der Website veröffentlicht und treten mit der Veröffentlichung in Kraft. Bei wesentlichen Änderungen werden bestehende Kunden vorgängig informiert.</p>
+    <p>immoMatch.ai behält sich vor, diese AGB jederzeit zu ändern. Änderungen werden auf der Website veröffentlicht und treten mit der Veröffentlichung in Kraft. Bei wesentlichen Änderungen werden bestehende Kunden vorgängig informiert.</p>
 
+  </div>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="mobileClose" aria-label="Menü schliessen">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#agenten">KI-Agenten</a>
+    <a href="/#preise">Preise</a>
+    <a href="/#kontakt">Kontakt</a>
+    <a href="/ueber-uns.html">Über uns</a>
+    <a href="/#bewertung" class="mobile-cta">Kostenlose Bewertung</a>
   </div>
 
   <footer>
     <div class="inner">
-      <a href="/" class="logo">immo<span>Match</span>.ai</a>
+      <a href="/" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
       <div class="links">
         <a href="/ueber-uns.html">Über uns</a>
         <a href="/datenschutz.html">Datenschutz</a>
         <a href="/agb.html">AGB</a>
         <a href="/#kontakt">Kontakt</a>
       </div>
-      <div class="copy">© 2026 ImmoMatch.ai — Zürich, Schweiz</div>
+      <div class="copy">© 2026 immoMatch.ai, Zürich, Schweiz</div>
     </div>
   </footer>
 
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileClose = document.getElementById('mobileClose');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mobileOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.mobile-menu a').forEach(a => {
+      a.addEventListener('click', closeMenu);
+    });
+  </script>
 </body>
 </html>

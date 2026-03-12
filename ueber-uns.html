@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns | ImmoMatch.ai</title>
-  <meta name="description" content="Das Team hinter ImmoMatch.ai. KI-gestützte Immobilienvermittlung für die Schweiz.">
+  <title>Über uns — immoMatch.ai | KI-Immobilienvermittlung Schweiz | Gründer & Vision</title>
+  <meta name="description" content="Lernen Sie immoMatch.ai kennen: Mission, Werte und Roadmap der KI-gestützten Immobilienvermittlung. Gegründet von einem Tech-Experten mit CTO-Erfahrung. Nur 1% Provision, Daten in der Schweiz.">
+
+  <meta name="keywords" content="immoMatch.ai Team, KI Immobilienmakler Schweiz, PropTech Startup Zürich, Immobilien KI Bewertung, digitaler Immobilienverkauf">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.immomatch.ai/ueber-uns.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.immomatch.ai/ueber-uns.html">
+  <meta property="og:title" content="Über uns — immoMatch.ai | KI-Immobilienvermittlung Schweiz">
+  <meta property="og:description" content="Mission, Werte und Roadmap von immoMatch.ai. KI-gestützte Immobilienvermittlung mit nur 1% Provision.">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:site_name" content="immoMatch.ai">
+  <meta property="og:image" content="https://www.immomatch.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0f1a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
@@ -306,6 +324,100 @@
     footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
     footer .copy { font-size: 0.8rem; }
 
+    
+    /* MOBILE MENU */
+    .menu-toggle { display: none; }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 15, 26, 0.5);
+      z-index: 99;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100%;
+      background: var(--paper);
+      z-index: 101;
+      padding: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -4px 0 30px rgba(10, 15, 26, 0.1);
+    }
+
+    .mobile-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .mobile-menu .close-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ink);
+      margin-bottom: 2rem;
+      margin-left: auto;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.85rem 0;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:hover { color: var(--accent); }
+
+    .mobile-menu .mobile-cta {
+      display: block;
+      margin-top: 1.5rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.85rem;
+      border-radius: 100px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-bottom: none;
+    }
+
+    .mobile-menu .mobile-cta:hover { color: var(--paper); }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        color: var(--ink);
+      }
+    }
+
     @media (max-width: 768px) {
       nav ul { display: none; }
       .values-grid { grid-template-columns: 1fr; }
@@ -313,6 +425,23 @@
       footer .links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Über immoMatch.ai",
+    "url": "https://www.immomatch.ai/ueber-uns.html",
+    "description": "Mission, Werte und Roadmap von immoMatch.ai",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "immoMatch.ai",
+      "url": "https://www.immomatch.ai",
+      "foundingDate": "2026",
+      "foundingLocation": "Zürich, Schweiz"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -325,6 +454,9 @@
         <li><a href="/#kontakt">Kontakt</a></li>
         <li><a href="/#bewertung" class="nav-cta">Kostenlose Bewertung</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Menü öffnen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
@@ -337,7 +469,7 @@
   <div class="content">
 
     <h2>Unsere Mission</h2>
-    <p>ImmoMatch.ai will den Schweizer Immobilienverkauf grundlegend verändern. Jährlich fliessen über <strong>CHF 1,2 Milliarden</strong> an Maklerprovisionen in eine Dienstleistung, die sich zu 80 bis 90 % automatisieren lässt. Wir schliessen die Lücke zwischen teuren Full-Service-Maklern und den limitierten Selbstverkaufsportalen.</p>
+    <p>immoMatch.ai will den Schweizer Immobilienverkauf grundlegend verändern. Jährlich fliessen über <strong>CHF 1,2 Milliarden</strong> an Maklerprovisionen in eine Dienstleistung, die sich zu 80 bis 90 % automatisieren lässt. Wir schliessen die Lücke zwischen teuren Full-Service-Maklern und den limitierten Selbstverkaufsportalen.</p>
     <p>Mit spezialisierten KI-Agenten für Bewertung, Vermarktung, Interessenten-Prüfung und Vertragsvorbereitung bieten wir Full-Service-Qualität zu einem Bruchteil der Kosten. <strong>Nur 1 % Erfolgsprovision</strong> statt der üblichen 2 bis 3 %.</p>
 
     <h2>Unsere Werte</h2>
@@ -366,8 +498,8 @@
     </div>
 
     <h2>Der Gründer</h2>
-    <p>ImmoMatch.ai wird von einem Technologie-Experten mit über einer Dekade Erfahrung im Enterprise-Umfeld gegründet. Er war von der Gründung 2008 bis zum Verkauf als CTO von <strong>eventlokale.ch</strong> dabei, dem grössten Eventportal der Schweiz mit über 3'000 täglichen Nutzern. Diese Erfahrung im Aufbau einer Schweizer Plattform von Null auf Marktführerschaft prägt den Ansatz von ImmoMatch.ai.</p>
-    <p>Die Kombination aus <strong>Technologie-Expertise</strong>, einem <strong>breiten Industrie-Netzwerk</strong> und der Bereitschaft, etablierte Geschäftsmodelle in Frage zu stellen, ist der strategische Vorteil von ImmoMatch.ai. Die grössten Veränderungen kommen selten von Insidern. Sie kommen von Technologen, die veraltete Modelle von aussen hinterfragen.</p>
+    <p>immoMatch.ai wird von einem Technologie-Experten mit über einer Dekade Erfahrung im Enterprise-Umfeld gegründet. Er war von der Gründung 2008 bis zum Verkauf als CTO von <strong>eventlokale.ch</strong> dabei, dem grössten Eventportal der Schweiz mit über 3'000 täglichen Nutzern. Diese Erfahrung im Aufbau einer Schweizer Plattform von Null auf Marktführerschaft prägt den Ansatz von immoMatch.ai.</p>
+    <p>Die Kombination aus <strong>Technologie-Expertise</strong>, einem <strong>breiten Industrie-Netzwerk</strong> und der Bereitschaft, etablierte Geschäftsmodelle in Frage zu stellen, ist der strategische Vorteil von immoMatch.ai. Die grössten Veränderungen kommen selten von Insidern. Sie kommen von Technologen, die veraltete Modelle von aussen hinterfragen.</p>
 
     <h2>Unsere Roadmap</h2>
     <div class="timeline">
@@ -407,6 +539,19 @@
 
   </div>
 
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="mobileClose" aria-label="Menü schliessen">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#agenten">KI-Agenten</a>
+    <a href="/#preise">Preise</a>
+    <a href="/#kontakt">Kontakt</a>
+    <a href="/ueber-uns.html">Über uns</a>
+    <a href="/#bewertung" class="mobile-cta">Kostenlose Bewertung</a>
+  </div>
+
   <footer>
     <div class="inner">
       <a href="/" class="logo">immo<span>Match</span><span class="ai-part">.aı<svg class="swiss-dot" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#FF0000"/><rect x="8" y="3.5" width="4" height="13" rx="1" fill="#fff"/><rect x="3.5" y="8" width="13" height="4" rx="1" fill="#fff"/></svg></span></a>
@@ -416,9 +561,36 @@
         <a href="/agb.html">AGB</a>
         <a href="/#kontakt">Kontakt</a>
       </div>
-      <div class="copy">© 2026 ImmoMatch.ai, Zürich, Schweiz</div>
+      <div class="copy">© 2026 immoMatch.ai, Zürich, Schweiz</div>
     </div>
   </footer>
 
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileClose = document.getElementById('mobileClose');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mobileOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    if (menuToggle) menuToggle.addEventListener('click', openMenu);
+    if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.mobile-menu a').forEach(a => {
+      a.addEventListener('click', closeMenu);
+    });
+  </script>
 </body>
 </html>
