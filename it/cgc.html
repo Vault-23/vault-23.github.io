@@ -198,196 +198,6 @@
     footer a:hover { color: var(--paper); }
     footer .links { display: flex; gap: 2rem; font-size: 0.85rem; }
     footer .copy { font-size: 0.8rem; }
-
-    
-
-    /* ─── LANGUAGE SWITCHER ─── */
-    .lang-switch {
-      position: relative;
-      margin-left: 0.5rem;
-    }
-
-    .lang-switch-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.35rem 0.6rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--slate);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: all 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .lang-switch-btn:hover { border-color: var(--accent); color: var(--accent); }
-
-    .lang-switch-btn svg { width: 10px; height: 10px; transition: transform 0.2s; }
-    .lang-switch.open .lang-switch-btn svg { transform: rotate(180deg); }
-
-    .lang-dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 6px);
-      right: 0;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 8px 30px rgba(10, 15, 26, 0.1);
-      min-width: 130px;
-      z-index: 200;
-      overflow: hidden;
-    }
-
-    .lang-switch.open .lang-dropdown { display: block; }
-
-    .lang-dropdown a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1rem;
-      font-size: 0.85rem;
-      color: var(--slate);
-      text-decoration: none;
-      transition: background 0.15s;
-    }
-
-    .lang-dropdown a:hover { background: var(--cream); color: var(--ink); }
-    .lang-dropdown a.active { color: var(--accent); font-weight: 600; }
-
-    .lang-flag { font-size: 1.1rem; }
-
-    /* MOBILE MENU */
-    .menu-toggle { display: none; }
-
-    .mobile-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(10, 15, 26, 0.5);
-      z-index: 99;
-    }
-
-    .mobile-overlay.open { display: block; }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 280px;
-      height: 100%;
-      background: var(--paper);
-      z-index: 101;
-      padding: 2rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      box-shadow: -4px 0 30px rgba(10, 15, 26, 0.1);
-    }
-
-    .mobile-menu.open {
-      display: block;
-      transform: translateX(0);
-    }
-
-    .mobile-menu .close-btn {
-      background: none;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--ink);
-      margin-bottom: 2rem;
-      margin-left: auto;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 0.85rem 0;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .mobile-menu a:hover { color: var(--accent); }
-
-    .mobile-menu .mobile-cta {
-      display: block;
-      margin-top: 1.5rem;
-      background: var(--ink);
-      color: var(--paper);
-      padding: 0.85rem;
-      border-radius: 100px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border-bottom: none;
-    }
-
-    .mobile-menu .mobile-cta:hover { color: var(--paper); }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: none;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        cursor: pointer;
-        color: var(--ink);
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav ul { display: none; }
-      footer .inner { flex-direction: column; gap: 1.5rem; text-align: center; }
-      footer .links { flex-wrap: wrap; justify-content: center; }
-    }
-
-    .mobile-lang-row {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    .mobile-lang-link {
-      display: inline-flex !important;
-      padding: 0.5rem 0.85rem !important;
-      border: 1px solid var(--border) !important;
-      border-radius: 6px !important;
-      font-size: 0.85rem !important;
-      border-bottom: 1px solid var(--border) !important;
-      transition: all 0.2s;
-    }
-
-    .mobile-lang-link:hover {
-      border-color: var(--accent) !important;
-      color: var(--accent) !important;
-    }
-
-    @media (max-width: 768px) {
-      .lang-switch { display: none; }
-    }
   </style>
 </head>
 <body>
@@ -401,15 +211,7 @@
         <li><a href="/it/#kontakt">Contatto</a></li>
         <li><a href="/it/#bewertung" class="nav-cta">Valutazione gratuita</a></li>
       </ul>
-      <div class="lang-switch" id="langSwitch">
-        <button class="lang-switch-btn" aria-label="Language">IT <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg></button>
-        <div class="lang-dropdown">
-          <a href="/agb.html"><span class="lang-flag">🇨🇭</span> Deutsch</a>
-          <a href="/en/terms.html"><span class="lang-flag">🇬🇧</span> English</a>
-          <a href="/fr/cgv.html"><span class="lang-flag">🇫🇷</span> Français</a>
-          <a href="/it/cgc.html" class="active"><span class="lang-flag">🇮🇹</span> Italiano</a>
-        </div>
-      </div>
+      <div class="lang-bar"><a href="/agb.html">DE</a><a href="/en/terms.html">EN</a><a href="/fr/cgv.html">FR</a><a href="/it/cgc.html" class="active">IT</a></div>
       <button class="menu-toggle" aria-label="Apri menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -426,7 +228,7 @@
 
     <h2>1. Campo di applicazione</h2>
     <p>Le presenti condizioni generali di contratto (CGC) regolano l'utilizzo del sito web e dei servizi di immoMatch.ai. Utilizzando il nostro sito web e/o incaricando i nostri servizi, accetti queste CGC.</p>
-    <p>immoMatch.ai<br>c/o HairVibes GmbH<br>Tellenmattstrasse 55<br>6317 Oberwil b. Zug, Schweiz<br>E-Mail: <a href="mailto:info@immomatch.ai" style="color: inherit;">info@immomatch.ai</a></p>
+    <p>immoMatch.ai<br>c/o HairVibes GmbH<br>Tellenmattstrasse 55<br>6317 Oberwil b. Zug, Schweiz<br>E-Mail: <a href="/cdn-cgi/l/email-protection#3d54535b527d54505052505c495e55135c54" style="color: inherit;"><span class="__cf_email__" data-cfemail="94fdfaf2fbd4fdf9f9fbf9f5e0f7fcbaf5fd">[email&#160;protected]</span></a></p>
 
     <h2>2. Servizi</h2>
     <p>immoMatch.ai offre i seguenti servizi:</p>
@@ -513,11 +315,7 @@
         <a href="/it/chi-siamo.html">Chi siamo</a>
         <a href="/it/privacy.html">Privacy</a>
         <a href="/it/cgc.html">CGC</a>
-        <a href="/it/#kontakt">Contatto</a>
-      </div>
-      <div class="copy">© 2026 immoMatch.ai, Zurigo, Svizzera</div>
-    </div>
-  </footer>
+        <a href="/it/#kontakt">Con
 
 </body>
 </html>
